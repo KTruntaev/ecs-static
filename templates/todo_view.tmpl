@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>
+        To-Do list for user: {{ .User }}
+    </p>
+    <table>
+        <tr>
+            <td>Task</td>
+            <td>Done</td>
+        </tr>
+        {{ with .List }}
+        {{ range . }}
+        <tr>
+            <td>{{ .Name }}</td>
+            <td>{{ if .Done }}Yes{{ else }}No{{ end }}</td>
+        </tr>
+        {{ end }}
+        {{ end }}
+    </table>
+</body>
+</html>
