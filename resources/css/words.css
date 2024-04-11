@@ -1,0 +1,130 @@
+#body {
+    /*display: none;*/
+}
+
+#body > #content  .tt {
+    /*font-weight: bold;*/
+    color: #0077ff;
+    /*position: relative;*/
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+
+}
+
+.tt > .tt-text {
+    display: none;
+
+    padding: .5em;
+
+    background: #ffffff;
+    border: thin solid #001d67;
+
+    /*min-height:1.5em;*/
+    max-height: 15em;
+
+    overflow:auto;
+    /*white-space: nowrap;*/
+    /*word-break: break-word;*/
+    text-overflow: ellipsis;
+
+    width: 300px;
+    /*margin-left: -150px;*/
+    margin-top: 0rem;
+
+    position: absolute;
+    z-index: 1;
+    /*top: 100%;*/
+    top: 100%;
+
+    /*right: 150%;*/
+}
+
+.tt-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tt-left {
+    left: 0;
+    /*transform: translateX(-7%) !important;*/
+    /*left: 92% !important;*/
+}
+
+.tt-right {
+    right: 0;
+    /*left: 170%*/
+}
+
+.tt:hover {
+    background: orange;
+}
+
+.tt:hover > .tt-text {
+    display: inline-block;
+}
+
+
+
+/*.tt > .tt-text > b {*/
+/*    font-size: 2rem;*/
+/*    margin-bottom: .67em;*/
+/*    display: block;*/
+/*    background: gray;*/
+/*}*/
+
+/*#body > #content .body {*/
+/*    margin-inline: auto;*/
+/*    width: 600px;*/
+/*}*/
+
+
+.tooltip {
+    display:inline-block;
+    position:relative;
+    border-bottom:1px dotted #666;
+    text-align:left;
+}
+
+.tooltip .bottom {
+    min-width:200px;
+    top:40px;
+    left:100%;
+    transform:translate(-50%, 0);
+    padding:10px 20px;
+    color:#444224;
+    background-color:#EEEEEE;
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    display:none;
+}
+
+.tooltip:hover .bottom {
+    display:block;
+}
+
+.tooltip .bottom i {
+    position:absolute;
+    bottom:100%;
+    left:50%;
+    margin-left:-12px;
+    width:24px;
+    height:12px;
+    overflow:hidden;
+}
+
+.tooltip .bottom i::after {
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    left:50%;
+    transform:translate(-50%,50%) rotate(45deg);
+    background-color:#EEEEEE;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
