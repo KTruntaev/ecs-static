@@ -1,3 +1,10 @@
+/*
+    IMPORTANT: When updating this file, remember to run it through https://autoprefixer.github.io/ and
+    paste the result into the resources/css/encycl-styles.css in order to ensure the css getting served supports
+    every browser
+*/
+
+
 :root {
     background: rgba(0, 29, 103, 0.4);
 

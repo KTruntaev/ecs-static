@@ -1,5 +1,58 @@
-#body {
+/*
+    IMPORTANT: When updating this file, remember to run it through https://autoprefixer.github.io/ and
+    paste the result into the resources/css/words.css in order to ensure the css getting served supports
+    every browser
+*/
+
+.index-div {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+
+}
+
+.index-div h3 {
+    display: block;
+    width: 100%;
+    /*border-bottom: 2px solid rgba(33, 44, 100, 0.3);*/
+    /*width: auto;*/
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.index-list-div {
+    /*justify-items: center;*/
+    padding: 1em;
+    /*height: 200px;*/
+    /*max-height: 20em;*/
+    /*border: 1px solid grey;*/
+    /*border-top: 2px solid #001d67;*/
+
+    column-fill: balance;
+    -webkit-column-fill: balance;
+    -moz-column-fill: balance;
+    /*column-width: 10svh;*/
+    column-count: 5;
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+}
+
+.index-list-div li:first-child {
+    /*hacky solution to align all the objects*/
+    margin-top: -1em;
+}
+
+.index-list-div ul{
+    padding: 0;
+}
+
+.index-list-div li::marker {
     /*display: none;*/
+    content: "> ";
 }
 
 #body > #content  .tt {
@@ -12,6 +65,42 @@
 
 }
 
+.word-div {
+    /*display: none;*/
+    margin-bottom: 1em;
+    /*margin-top: 1em;*/
+    display: inline-block;
+}
+
+.tt img,
+.word-div img {
+    float: left;
+    padding-right: 1em;
+    /*border: grey;*/
+}
+
+.tt img {
+    max-width: 150px;
+    max-height: 150px;
+}
+.tt span,
+.word-div span {
+    margin-top: .1em;
+    margin-bottom: 0;
+    display: block;
+}
+
+.tt b,
+.word-div  b {
+    /*width: auto;*/
+    display: block;
+    color: #001d67;
+    font-size: 1.25em;
+    margin-bottom: .1em;
+}
+
+
+
 .tt > .tt-text {
     display: none;
 
@@ -21,14 +110,14 @@
     border: thin solid #001d67;
 
     /*min-height:1.5em;*/
-    max-height: 15em;
+    max-height: 14.75em;
 
     overflow:auto;
     /*white-space: nowrap;*/
     /*word-break: break-word;*/
     text-overflow: ellipsis;
 
-    width: 300px;
+    width: 25em;
     /*margin-left: -150px;*/
     margin-top: 0rem;
 
@@ -64,67 +153,3 @@
     display: inline-block;
 }
 
-
-
-/*.tt > .tt-text > b {*/
-/*    font-size: 2rem;*/
-/*    margin-bottom: .67em;*/
-/*    display: block;*/
-/*    background: gray;*/
-/*}*/
-
-/*#body > #content .body {*/
-/*    margin-inline: auto;*/
-/*    width: 600px;*/
-/*}*/
-
-
-.tooltip {
-    display:inline-block;
-    position:relative;
-    border-bottom:1px dotted #666;
-    text-align:left;
-}
-
-.tooltip .bottom {
-    min-width:200px;
-    top:40px;
-    left:100%;
-    transform:translate(-50%, 0);
-    padding:10px 20px;
-    color:#444224;
-    background-color:#EEEEEE;
-    font-weight:normal;
-    font-size:13px;
-    border-radius:8px;
-    position:absolute;
-    z-index:99999999;
-    box-sizing:border-box;
-    box-shadow:0 1px 8px rgba(0,0,0,0.5);
-    display:none;
-}
-
-.tooltip:hover .bottom {
-    display:block;
-}
-
-.tooltip .bottom i {
-    position:absolute;
-    bottom:100%;
-    left:50%;
-    margin-left:-12px;
-    width:24px;
-    height:12px;
-    overflow:hidden;
-}
-
-.tooltip .bottom i::after {
-    content:'';
-    position:absolute;
-    width:12px;
-    height:12px;
-    left:50%;
-    transform:translate(-50%,50%) rotate(45deg);
-    background-color:#EEEEEE;
-    box-shadow:0 1px 8px rgba(0,0,0,0.5);
-}
