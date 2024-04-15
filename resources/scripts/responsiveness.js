@@ -29,7 +29,7 @@ function assignTooltipPos() {
         console.log(getParentLeft(tt))
         console.log(getParentRight(tt))
 
-        if(getParentLeft(tt) < 50) {
+        if(getParentLeft(tt) < 75) {
             var tt_text = tt.querySelector(".tt-text")
             tt_text.classList.remove("tt-left")
             tt_text.classList.remove("tt-center")
@@ -37,7 +37,7 @@ function assignTooltipPos() {
 
             tt_text.classList.add("tt-left")
             console.log("ADDED LEFT!")
-        } else if (getParentRight(tt) < 50) {
+        } else if (getParentRight(tt) < 75) {
             var tt_text = tt.querySelector(".tt-text")
             tt_text.classList.remove("tt-left")
             tt_text.classList.remove("tt-center")
