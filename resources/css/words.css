@@ -67,6 +67,9 @@
     border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 
 }
+.tt span, .tt b {
+    color: black;
+}
 
 .word-div {
     /*display: none;*/
@@ -111,6 +114,7 @@
 
     background: #ffffff;
     border: thin solid #001d67;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.15);
 
     /*min-height:1.5em;*/
     max-height: 14.75em;
@@ -149,7 +153,7 @@
 }
 
 .tt:hover {
-    background: orange;
+    background: rgba(185, 206, 255, 0.33);
 }
 
 .tt:hover > .tt-text {
