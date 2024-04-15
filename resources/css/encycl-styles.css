@@ -189,6 +189,7 @@
 
 #body > #content > figure > table,th,td {
     width: 100%;
+    padding: .5em;
     border: 1px solid;
     border-collapse: collapse;
 }
