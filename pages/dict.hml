@@ -1,0 +1,18 @@
+<html><head>
+    <title>Dictionary</title>
+
+</head>
+<body>
+<main>
+    <div class="side-navbar-placeholder"></div>
+    <div id="body">
+        <div id="title">
+            <h1>Electrochemistry Dictionary</h1>
+        </div>
+
+        <div id="content">
+        </div>
+    </div>
+    <div class="side-navbar-placeholder"></div>
+</main>
+</body></html>
