@@ -11,7 +11,6 @@
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     font-size: 16px;
     hyphens: auto;
-
     --sidebar-width: 10em;
     --body-min-width: 600px;
     --body-max-width: 1600px;   /*REMEMBER TO CHANGE THE CORRESPONDING MEDIA QUERY*/
@@ -236,6 +235,7 @@
     gap: 1rem;
 
     width: clamp(var(--body-min-width) + 2rem, 95svw ,1600px);
+
     margin-inline: auto;
     height: calc(100%);
 
@@ -355,6 +355,7 @@ main {
 }
 
 .side-navbar li{
+    margin-bottom: .25em;
     /*background: red;*/
 }
 
