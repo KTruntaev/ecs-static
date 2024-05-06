@@ -16,55 +16,19 @@
     --body-max-width: 1600px;   /*REMEMBER TO CHANGE THE CORRESPONDING MEDIA QUERY*/
 }
 
-/*br {*/
-/*    !*margin-top: 100rem;*!*/
-/*    display: inline-block;*/
-/*    height: 1px;*/
-/*    margin-inline: auto;*/
-
-/*}*/
-/*br::after{*/
-/*    content: "'";*/
-/*}*/
-
-
-/*:root h1 {*/
-/*    font-size: 2.5em;*/
-/*}*/
-
-/*:root h2 {*/
-/*    font-size: 1.75em;*/
-/*}*/
-
-/*:root h3 {*/
-/*    font-size: 1.25rem;*/
-/*}*/
 
 /*** BODY/CONTENT STYLING ***/
-
 #body {
-    /*display: none;*/
-
-    /* TODO: add vars for Magic Numbers*/
     width: calc(var(--body-max-width) - 2 * var(--sidebar-width) - 12rem);
-
-    /*font-size: 32px;*/
 
     background: rgb(255, 255, 255);
     border: thin solid #006730;
     padding: 1rem;
-    /*padding-top: ;*/
 
     position: relative;
 
     flex-shrink: 0;
-    /*line-height: 1.5rem;*/
-
-    /*word-break: break-word;*/
-    /*hyphens: auto;*/
 }
-
-
 
 #body > #attributions {
     padding: 1rem;
@@ -78,8 +42,6 @@
 #body > #title {
     display: flex;
     gap: 1rem;
-    /* TODO: Lower the margins this way could be a fairly hacky solution */
-    /*margin-bottom: .5rem;*/
 
     /*Needed to make the dropdown menu appear below the button*/
     position: relative;
@@ -93,7 +55,6 @@
     margin-bottom: .5rem;
     margin-top: .5rem;
     width: 100%;
-    /*font-size: 2.5em;*/
 }
 
 #body > #content > h2{
@@ -113,35 +74,25 @@
 }
 
 #body > #content > p {
-    /*overflow: auto;*/
-    /*display: none;*/
 }
 
 
 #body > #content > ul{
     /*Needed to make sure the list indents with a floating image near it*/
     overflow: auto;
-
-    /*display: none;*/
-    /*padding-left: 5rem;*/
 }
 
 /* Figure Alignments */
-
 #body > #content > figure {
-    /*overflow-wrap: normal;*/
-    /*overflow: hidden;*/
     display: table;
 
     width: fit-content;
     max-width: var(--body-min-width);
     height: fit-content;
-    /*max-height: 600px;*/
 
     padding: 4px;
     background: #f6f6f6;
     border: 1px solid gray;
-    /*border-bottom: none;*/
 }
 
 #body > #content > figure > ul {
@@ -153,13 +104,8 @@
 }
 
 #body > #content > figure > img {
-    /*display: table;*/
-    /*text-align: center;*/
-
     max-width: calc(var(--body-min-width) - 2em - 8px);
-    /*max-height: 600px;*/
 
-    /*display: inline-block;*/
     /*REMOVES empty spaces below an image*/
     vertical-align:text-bottom;
 
@@ -182,8 +128,6 @@
     margin-top: -2px;
     padding: .25em;
     text-align: center;
-    /*width: 100%;*/
-    /*width: 100px;*/
 }
 
 #body > #content > figure > table,th,td {
@@ -194,8 +138,6 @@
 }
 
 #body > #content > .fig-right {
-    /*display: inline-block;*/
-
     margin: 0;
     margin-left: 1em;
     margin-bottom: .25em;
@@ -206,9 +148,6 @@
 
 
 #body > #content > .fig-left {
-    /*display: inline-block;*/
-
-
     margin: 0;
     margin-right: 1em;
     margin-bottom: .25em;
@@ -218,8 +157,6 @@
 }
 
 #body > #content > .fig-center {
-    /*display: block;*/
-
     margin: 0;
     margin-bottom: .25em;
     margin-top: .25em;
@@ -240,8 +177,6 @@
     height: calc(100%);
 
     background: rgb(255, 255, 255);
-    /*border: thin solid #a40ed6;*/
-
 }
 
 main {
@@ -260,8 +195,7 @@ main {
 
 
 
-/********************** Navbars **********************/
-
+/********************** NAVBARS **********************/
 #top-navbar {
     display: flex;
     gap: 1rem;
@@ -271,7 +205,6 @@ main {
     justify-content: center;
 
     background: rgb(255, 255, 255);
-    /*border: thin solid #0077ff;*/
 
     box-shadow: 0px 5px 5px rgba(0, 29, 103, 0.43);
 
@@ -309,15 +242,12 @@ main {
     max-height: 400px;
 
     top: 1em;
-    /*TODO FINISH THIS MARGIN (make header sizes a variable)*/
-    /*This margin is to make the sidebar align with the title positioning*/
     margin-top: 3.5em;
 
     flex-shrink: 0;
 
     background: rgb(255, 255, 255);
-    /*border: thin solid #a40ed6;*/
-    /*padding: 1rem;*/
+
     padding-left: 0rem;
 }
 
@@ -343,15 +273,12 @@ main {
     list-style: none;
     margin-top: 0;
     padding: 0;
-    /*padding-left: 1em;*/
 }
 
 .side-navbar > ul > * {
-    /*background: #0077ff;*/
     word-break: break-word;
     overflow-wrap: normal;
     overflow: hidden;
-    /*background: rgba(255, 165, 0, 0.34);*/
 }
 
 .side-navbar li{
@@ -361,15 +288,6 @@ main {
 
 .side-navbar li::marker {
     content: "> ";
-}
-
-/*TODO not working*/
-.side-navbar > ul > li:visited {
-    color: #006730;
-}
-
-.side-navbar > ul > li:link {
-    color: #006730;
 }
 
 .side-navbar > ul > *:hover {
@@ -395,13 +313,9 @@ main {
 
 .side-navbar-dropdown-button {
     display: none;
-    /*position: fixed;*/
     z-index: 1;
-    /*TO MAKE IT STICKY I WILL NEED TO CREATE YET ANOTHER ELEMENT that pops into existence when we scroll*/
-    /*position: sticky;*/
-    /*top: 1rem;*/
+
     background: white;
-    /*border: 1px solid black;*/
 
     height: 2em;
     width: 2em;
@@ -410,8 +324,6 @@ main {
 /*Makes the sidenav dropdown button sticky*/
 .sidenav-dd-button-sticky {
     top: 1em;
-    /*left: 1em;*/
-    /*margin-top: -15rem;*/
     position: fixed;
     padding: .25em;
     border: 1px solid black;
@@ -420,7 +332,6 @@ main {
 /*Makes the sidenav dropdown sticky*/
 .sidenav-dd-sticky {
     top: calc(1.7em - 1px);
-    /*margin-top: -15rem;*/
     position: fixed;
     padding: 1em;
     border: 1px solid black;
@@ -439,11 +350,9 @@ main {
 }
 
 
-/*MEDIA QUERIES */
-
+/*MEDIA QUERIES (used for resizing for different screen resolutions)*/
 @media (max-width: calc(1800px)) {
     .side-navbar-placeholder {
-        /*width: clamp(0rem, 5svw, 10rem);*/
         padding: 0;
         margin: 0;
     }
@@ -527,9 +436,6 @@ main {
 }
 
 #search-bar > .gsc-control-cse {
-    /* INTENTIONALLY UGLY FOR DEBUGGING */
-    /*font-family: "Bauhaus 93";*/
-
     width: 300px;
 
     /* search box */
@@ -565,49 +471,14 @@ main {
     }
 }
 
-/*#search-bar > .gsc-control-cse {*/
-/*    padding: 0px;*/
-/*    !*border: none;*!*/
-/*    width: 300px;*/
-/*}*/
 
-/*#search-bar > .gsc-control-cse {*/
-/*    !* search box *!*/
-/*    .gsc-search-box {*/
-/*        background: #ffffff;*/
-/*        margin: 0;*/
-/*    }*/
-/*    !* search box input*!*/
-/*    .gsc-input {*/
-/*        !*display: none;*!*/
-/*    }*/
-/*    !* ads *!*/
-/*    .gsc-adBlock {*/
-/*        display: none;*/
-/*    }*/
-/*    !* search button *!*/
-/*    .gsc-search-button {*/
-/*        background: rgb(0, 0, 0);*/
-/*        margin: 0;*/
-/*        padding-right: 12px;*/
-/*    }*/
-/*}*/
-
-
-
-
-
-
-/* BACKUP flexboxes */
-
+/* GENERIC FLEXBOXES */
 .v-flex {
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
 
-    background: rgba(164, 14, 214, 0.24);
-    /*border: thin solid #a40ed6;*/
     padding: 2rem;
 }
 
@@ -618,9 +489,6 @@ main {
 
     align-content: center;
     justify-content: center;
-
-    background: rgb(255, 255, 255);
-    /*border: thin solid #0077ff;*/
 
     padding: 2rem;
 }
