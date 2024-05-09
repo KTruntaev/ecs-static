@@ -1,1 +1,1 @@
-### This is the directory to store all the meta information, like editor contribution guidelines, page templates, etc.
+This is the directory to store all the meta information, like editor contribution guidelines, page templates, etc.
